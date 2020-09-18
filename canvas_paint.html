@@ -32,15 +32,17 @@
         <button id="pen">ペン</button>
 
         <!--消しゴム-->
-        <button id="erase">消しゴム</button>
+        <button id="eraser">消しゴム</button>
 
-        <!-- 戻るボタン(難しい！) -->
+        <!-- 戻るボタン -->
         <button id="back">1つ戻る</button>
 
-        <!-- 進むボタン(難しい！) -->
+        <!-- 進むボタン -->
         <button id="forwardbtn">1つ進む</button>
+
         <!-- クリアボタン -->
         <button id="clear_btn">クリア</button>
+
         <!-- サイン -->
         <form
           name="form1"
@@ -123,7 +125,7 @@
           this.canvas = document.getElementById("drowarea");
           this.context = this.canvas.getContext("2d");
           this.pencil = document.getElementById("pen");
-          this.eraser = document.getElementById("erase");
+          this.eraser = document.getElementById("eraser");
 
           this.pencil.addEventListener(
             "click",
@@ -381,15 +383,12 @@
 
       //消しゴム(書いた線を消去する状態にする処理)
       $("#erase").on("click", function (e) {
-        console.log("消しゴムモードです！");
         // 消しゴムの状態にする処理
-        //color='#fff'; （白）に設定するのは凡人
         context.globalCompositeOperation = "destination-out";
       });
 
       // 戻るボタン(高難度！！ここ以外でもいろいろな処理が必要です！！)
       $("#back").on("click", function () {
-        // console.log('一つ戻る');
         if (flagMemory > 0) {
           flagMemory--;
           context.putImageData(imageMemory[flagMemory], 0, 0);
