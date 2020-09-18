@@ -1,0 +1,29 @@
+.titlep {
+  font-family: "Hiragino Mincho ProN";
+  font-size: 130px;
+  margin: 0%;
+  padding: 0%;
+}
+.title {
+  font-family: "Hiragino Mincho ProN";
+  background-color: rgb(241, 239, 239);
+}
+.color {
+  color: rgb(19, 10, 26);
+}
+button {
+  margin-left: 12px;
+  font-family: "Hiragino Mincho ProN";
+}
+.drowarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
